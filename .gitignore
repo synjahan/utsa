@@ -1,0 +1,4 @@
+.env
+.last_message_id
+userbot.session
+.user_map.json
