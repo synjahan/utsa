@@ -1,5 +1,5 @@
 # Utsa — Demo Seed & Prompt Battery
-*For Dhaval to (1) pre-load into Utsa's memory and (2) run live during the demo. Built from the real #utsa-lfg channel. Real names, real dates.*
+*For Syn and Dhaval to (1) pre-load into Utsa's memory and (2) run live during the demo. Built from the real #utsa-lfg channel. Real names, real dates.*
 
 ---
 
@@ -72,7 +72,22 @@ Order matters: open with the hero, then prove it isn't a one-trick match.
 
 ---
 
-## Notes for rehearsal
-- Run all five at least twice before Sunday. Note which phrasings give the cleanest output and lock those.
-- If #3 or #4 ever produces a hallucinated match, that's a prompt-tuning fix in Utsa's role text ("never invent; if nothing fits, say the channel is thin and invite a post") — already in the knowledge base, but verify it holds under pressure.
-- The simulated posters (Dhaval typing as different people) is fine and expected by technical judges — just be transparent in the talk track: "in production each person posts from their own account; here we replay the channel's real history from memory."
+
+## Demo guardrails
+
+Utsa should propose matches only when there is a genuine overlap between a need and an offer.
+
+She should not invent people, skills, or certainty.
+
+If no strong match exists, she should say the channel is thin in that area and invite a clearer `#need` or `#offer` post.
+
+One clear match is better than five weak ones.
+
+---
+
+## Demo note
+
+This seed is intentionally small and curated.
+
+The goal is not to represent the whole channel. The goal is to demonstrate Utsa’s core behavior clearly: she can reason over dated memory, surface a relevant match from the past, explain the overlap, and stay quiet when nothing fits.
+
