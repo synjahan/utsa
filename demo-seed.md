@@ -1,5 +1,5 @@
 # Utsa — Demo Seed & Prompt Battery
-*For Syn and Dhaval to (1) pre-load into Utsa's memory and (2) run live during the demo. Built from the real #utsa-lfg channel. Real names, real dates.*
+*For Syn to (1) pre-load into Utsa's memory and (2) run live during the demo. Built from the real #utsa-lfg channel. Real names, real dates.*
 
 ---
 
