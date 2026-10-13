@@ -18,7 +18,7 @@ When a need and an offer fit, she messages each person privately with the match 
 
 A match is a suggestion, not a commitment. Each match carries one claim, written in the need-holder's own words. Utsa follows up after 48 hours and again after seven days. The loop closes only when both people confirm the same claim. That shared confirmation is the attestation.
 
-She can also find circles, the loops at the heart of OfferNet: three people where each one's offer fits the next one's need, so everyone gives and everyone gets, with no money in between. A circle forms only when all three say yes, and each link in it is confirmed by its own two people.
+She can also find circles, the loops at the heart of OfferNet. When someone offers help in return for something, Utsa looks for two or three people whose offers meet each other's needs all the way round, so everyone gives and everyone gets, with no money in between. A circle forms only when everyone in it says yes, and each link is confirmed by its own two people.
 
 ## Design principles
 
@@ -45,7 +45,7 @@ Utsa runs on Telegram. Each community runs its own Utsa, with its own bot and it
 
 - `utsa-prompt.txt`: the standing rules Utsa follows on every turn.
 - `knowledge-base.md`: long-form guidance and message templates.
-- `demo-seed.md`: example posts and a test battery.
+- `demo-seed.md`: invented posts and a test battery for testing Utsa on Telegram before launch.
 
 ## Where she goes next
 
