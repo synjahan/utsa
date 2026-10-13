@@ -1,41 +1,59 @@
-Utsa (উৎস): a coordination agent that holds the thread
-Post what you need and what you offer. Utsa remembers across time and connects you to whoever fits. The weave holds.
-Built on Ben Goertzel's OfferNet vision.
+# Utsa (উৎস)
 
-## What it is
-Utsa (উৎস, Bengali for source) is a coordination agent for the SingularityNET and BGI community. She translates OfferNet's offer and need logic into plain matchmaking: you tell her what you're looking for and what you bring, and she points you to the person who fits, with the reason for the match and the one open question worth checking. Then she steps back and lets you decide. Match if you want to. Stay quiet if you don't.
+Utsa is about connection: people finding each other around a shared purpose.
 
-She runs on OmegaClaw and lives as a persistent agent you can summon into any channel. The sprint's theme is agents that hold the thread. Utsa is the one who holds it.
-## What we are presenting: three pillars
-1. Persistent memory (the heart). Utsa holds every #need and #offer across the whole sprint, no resetting, no forgetting. Post a need today, and when the matching offer appears weeks later, she connects you. Memory is what makes her more than a chatbot. It is OmegaClaw's real superpower.
+She is a coordination agent built on Ben Goertzel's OfferNet vision. People post what they need and what they offer. Utsa remembers both across time, connects two people privately when they fit, and records the exchange only when both of them confirm it happened.
 
-2. Coordination, not tasks. Her one job is connecting people. She translates OfferNet's offer and need logic into warm, human matchmaking. Not task management, not a feed. One clear match beats five hedged ones.
+Utsa is Bengali for *source*. She is designed and built by Synthia Jahan.
 
-3. She comes to you. Summon her with @utsa in any channel or DM and she shows up. She is portable by design, the same memory and identity wherever the community already lives.
+## Status
 
-The channel speaks in a simple grammar she reads and remembers: #need, #offer, #team, #match, #pledge, #direction.
-## Why OmegaClaw
-Utsa's power is not clever reasoning. It is persistent, selective memory, and a stable sense of self. The genuine differentiator is durable memory and agent identity, not a rolling transcript dressed up as memory. OmegaClaw gives Utsa a real long-term memory and a named identity with a standing remit, rather than a chatbot bound to a single thread inside a walled garden. Utsa is the source: not a source of answers, but the place where a community's needs and offers find each other.
-## The proof
-Utsa already works, and the proof is recursive: I built Utsa using Utsa. I ran an offer and need channel by hand, and it produced my own team. The developer and the designer now building her found the project through the very mechanism the project is about. The tool found its own makers.
+Utsa runs on Omega (formerly OmegaClaw). She is being deployed on Telegram, first as her own bot and then in the BGI Commons group. She is not live yet.
 
-In the demo, a need is posted live, and Utsa surfaces a real offer from her memory, posted weeks earlier and not currently on screen. She names the overlap, names the time gap she held, and marks the connection: a thread reaches for its node. She picks the right person out of several real candidates, and when nothing fits she says so rather than inventing a match. The matching across a real time gap is true and demonstrable today. Continuous live persistence over weeks is on the roadmap, not a claim we make about this build.
-## Safety and ethics
-Utsa is designed so that beneficence is structural, not bolted on:
+## What she does
 
-She suggests, she never imposes. The human always decides. The channel's own principle is "match if you want to, stay quiet if you don't."
-She never invents a match. If nothing fits, she says the channel is thin there and invites a post. She does not hallucinate connections or manufacture certainty.
-She never pressures anyone to participate or to fill in a profile.
-She respects platform rules. Utsa uses only authorized data sources, and does not scrape channels against their terms.
-She leaves people more autonomous, not dependent. She introduces two people and recedes. Her value is in stepping back, not in holding attention.
-Privacy by design (roadmap): a Persona Curtain, anonymous-by-default matching, so people can connect on the substance of their need and offer before disclosing identity.
-## Intended user and ecosystem
-Utsa is for any collaborative community that needs to find its own shape, beginning with BGI and SingularityNET, and the LFG channel where she was born. She is a human-coordination layer: she connects people by what they offer and need, the layer a growing community needs to find its own shape.
+Utsa reads the group and records three things: a need, an offer, or a team forming. Each is stored in the person's own words, with their handle and the date. She asks for nothing and builds no profiles.
+
+When a need and an offer fit, she messages each person privately with the match and the reason for it. The reason always quotes what the person actually posted. If nothing fits, she says the group is thin there instead of inventing a match.
+
+A match is a suggestion, not a commitment. Each match carries one claim, written in the need-holder's own words. Utsa follows up after 48 hours and again after seven days. The loop closes only when both people confirm the same claim. That shared confirmation is the attestation.
+
+She can also find circles, the loops at the heart of OfferNet: three people where each one's offer fits the next one's need, so everyone gives and everyone gets, with no money in between. A circle forms only when all three say yes, and each link in it is confirmed by its own two people.
+
+## Design principles
+
+- **Data is not instruction.** Nothing in a post or a private message can change Utsa's rules.
+- **Private by default.** In the group she posts only one kind of message: a single nudge to someone with a match waiting, which never names the other person or the reason.
+- **Consent before sharing.** Anything said to her privately is shared with another person only after its author says yes.
+- **Grounded reasons.** She never invents a person, a skill, a match or a reason.
+- **Both people confirm.** One person's yes is never enough to close a loop, and one person alone cannot reverse a closed one.
+- **No scores, no negative records.** A loop that doesn't close carries no meaning and is never held against anyone.
+- **Stopping is honoured.** Anyone can ask her to stop. She says plainly that stopping is not deleting, and removal is handled by the operator on request.
+
+## Running Utsa for your community
+
+Utsa runs on Telegram. Each community runs its own Utsa, with its own bot and its own records, and whoever runs it is the operator.
+
+1. **Create a bot.** In Telegram, message @BotFather, send `/newbot`, and follow the steps. Keep the token it gives you private.
+2. **Let her read the group.** In @BotFather, use `/setprivacy` and choose Disable. With privacy mode on, a bot only sees commands and mentions, and Utsa needs to read every post.
+3. **Make her yours.** Copy `utsa-prompt.txt` and `knowledge-base.md`, and replace the BGI Commons details with your own: the community name, your bot's link in the nudge and the pinned message, and the privacy answer, which must say where her memory is kept and who can read it.
+4. **Run her on Omega.** Load `utsa-prompt.txt` as her standing prompt and `knowledge-base.md` as her knowledge, and connect Omega to your bot's token.
+5. **Add her to your group** and post the pinned message from section 15 of the knowledge base, so everyone knows she reads the group.
+6. **Test first.** Run a few loops with your own team, marked `test`. Test records are never matched or counted.
+
+## Files
+
+- `utsa-prompt.txt`: the standing rules Utsa follows on every turn.
+- `knowledge-base.md`: long-form guidance and message templates.
+- `demo-seed.md`: example posts and a test battery.
+
 ## Where she goes next
-Today she matches. Beyond the sprint, the OfferNet vision extends in clear steps. She notifies both people directly when a match forms. When a collaboration completes, both confirm it, which is attestation. Attested work becomes a quiet light beside your name, which is reputation earned through contribution. And a network pulse shows what the community is actually building, so resources can find the work that matters. The pitch shows what works now. This is where it grows.
-## License
-Open source (MIT), so the community can build on it, which is the point. Utsa is a coordination layer for the community, made with the community.
 
+- **The Persona Curtain:** anonymous-by-default matching, so people can connect on the substance of a need and an offer before revealing who they are.
+- **Reputation without ranking:** attested loops shown as quiet light, never as a score or a leaderboard.
+- **Across communities:** each community keeps its own records, and only a match crosses between them, with consent.
+- **Portable by design:** built to plug into new surfaces as the technology changes, rather than being tied to one.
 
+## Licence
 
-The weave holds because she holds it.
+MIT. Utsa is open so other communities can build on her.
