@@ -1,0 +1,92 @@
+[
+  {
+    "type": "ComplementaryCapability",
+    "supports": [
+      {
+        "id": "sprint-b:need",
+        "revision": 1
+      },
+      {
+        "id": "sprint-a:offer",
+        "revision": 1
+      }
+    ],
+    "scope": {
+      "agent": "utsa",
+      "container": "pilot",
+      "purpose": "discovery"
+    },
+    "rule_version": "98989133f9942069ac9bf4a196f4d4e05361ddc8a21675e7f3396d5708da9fd4",
+    "bridge_version": "5051029ebb7b70591f614777ee9199ba4903e5c6801dd7a367cffbb36eb8650d",
+    "evidence_id": "direct:bot-testing",
+    "explanation": "The offered capability exactly meets the stated requirement.",
+    "limitation": "Capability is a participant claim, not an independent skill certification.",
+    "cross_domain": false,
+    "age_gap_seconds": 1814400,
+    "observed_at": 1782129600,
+    "valid_until": 1783684800,
+    "state": "discovered",
+    "blockers": [],
+    "id": "rel:29e1e21bc2a8ff6ea1cb469806d86eee0a7a9102062cfc113c40acc02be27798"
+  },
+  {
+    "type": "GenuineOpportunity",
+    "supports": [
+      {
+        "id": "sprint-b:need",
+        "revision": 1
+      },
+      {
+        "id": "sprint-a:offer",
+        "revision": 1
+      }
+    ],
+    "scope": {
+      "agent": "utsa",
+      "container": "pilot",
+      "purpose": "discovery"
+    },
+    "rule_version": "98989133f9942069ac9bf4a196f4d4e05361ddc8a21675e7f3396d5708da9fd4",
+    "bridge_version": "5051029ebb7b70591f614777ee9199ba4903e5c6801dd7a367cffbb36eb8650d",
+    "evidence_id": "direct:bot-testing",
+    "explanation": "The offered capability exactly meets the stated requirement. Both records permit discovery here, availability windows overlap, capacity covers the request, and the supported conditions agree. Both owners still need to choose an introduction.",
+    "limitation": "Capability is a participant claim, not an independent skill certification.",
+    "cross_domain": false,
+    "age_gap_seconds": 1814400,
+    "observed_at": 1782129600,
+    "valid_until": 1782907200,
+    "state": "candidate",
+    "blockers": [],
+    "id": "rel:cc1851ce25ab34498f0826a0c4d9547f308ad0439183fa90b3f03d4474a669ba"
+  },
+  {
+    "type": "SharedInterest",
+    "supports": [
+      {
+        "id": "sprint-a:offer",
+        "revision": 1
+      },
+      {
+        "id": "sprint-b:need",
+        "revision": 1
+      }
+    ],
+    "scope": {
+      "agent": "utsa",
+      "container": "pilot",
+      "purpose": "discovery"
+    },
+    "rule_version": "98989133f9942069ac9bf4a196f4d4e05361ddc8a21675e7f3396d5708da9fd4",
+    "bridge_version": null,
+    "evidence_id": "topic:community-coordination",
+    "explanation": "Both contributions explicitly name the same interest; this makes no capability or availability claim.",
+    "limitation": "Shared interest alone does not establish a useful collaboration.",
+    "cross_domain": false,
+    "age_gap_seconds": 1814400,
+    "observed_at": 1782129600,
+    "valid_until": 1783684800,
+    "state": "discovered",
+    "blockers": [],
+    "id": "rel:64ae4d2d257c7c99d1a0ca16951ab4fc0034604f819b743e5039f1915b3b7f94"
+  }
+]

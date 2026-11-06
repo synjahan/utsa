@@ -1,0 +1,12 @@
+[
+  {
+    "scenario": "sprint_reconstruction",
+    "identical_full_results": true,
+    "relationships": 3
+  },
+  {
+    "scenario": "cross_domain",
+    "identical_full_results": true,
+    "relationships": 4
+  }
+]

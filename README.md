@@ -4,13 +4,32 @@ Utsa is about connection: people finding each other around a shared purpose.
 
 She is a coordination agent built on Ben Goertzel's OfferNet vision. People post what they need and what they offer. Utsa remembers both across time, connects two people privately when they fit, and records the exchange only when both of them confirm it happened.
 
-Utsa is Bengali for *source*. She is designed and built by Synthia Jahan.
+Utsa is Bangla for *source*. She is designed and built by Synthia Jahan.
 
 ## Status
 
-Utsa runs on Omega (formerly OmegaClaw). She is being deployed on Telegram, first as her own bot and then in the BGI Commons group. She is not live yet.
+The repository now includes a [portable matching core](core/README.md). Its MeTTa rules and Python support code run locally with synthetic records, without Telegram, Omega, Hives, an LLM, or platform credentials. The archived validation records 46 passing tests on each of Hyperon and PeTTa; see the [validation report](core/VALIDATION.md) for the tested versions and scope.
 
-## What she does
+The Telegram operator reports that the bot responds and identifies itself as of 5 November 2026. The complete matching and private introduction loop has not yet been tested. The deployed bot's exact revision and whether it invokes this portable core remain unverified.
+
+No live Hives adapter is included. The core returns an undelivered connection intent; authenticated host identity, storage integration, approved disclosure, and private delivery remain integration work. See [integration boundaries](core/docs/integration.md) and [review notes](core/REVIEW_NOTES.md).
+
+## Run the matching core
+
+From the repository root, with Python 3.11 or later:
+
+```sh
+cd core
+python3 -m venv .venv
+.venv/bin/python -m pip install -c requirements-lock.txt -e '.[test]'
+.venv/bin/python -m pytest -q
+```
+
+The default runtime is Hyperon 0.2.10. The [core README](core/README.md) documents the pinned PeTTa alternative, the earlier-offer/later-need example, and cross-domain discovery. Installing these files does not change the running Telegram bot.
+
+## Telegram design and prompt behavior
+
+The following description is the existing Telegram prompt design. It is not a claim that each behavior is implemented in the portable core or verified in the current deployment.
 
 Utsa reads the group and records three things: a need, an offer, or a team forming. Each is stored in the person's own words, with their handle and the date. She asks for nothing and builds no profiles.
 
@@ -32,7 +51,7 @@ She can also find circles, the loops at the heart of OfferNet. When someone offe
 
 ## Running Utsa for your community
 
-Utsa runs on Telegram. Each community runs its own Utsa, with its own bot and its own records, and whoever runs it is the operator.
+These are the existing Telegram/Omega setup notes. They do not install or connect the portable core. Each community runs its own Utsa, with its own bot and its own records, and whoever runs it is the operator.
 
 1. **Create a bot.** In Telegram, message @BotFather, send `/newbot`, and follow the steps. Keep the token it gives you private.
 2. **Let her read the group.** In @BotFather, use `/setprivacy` and choose Disable. With privacy mode on, a bot only sees commands and mentions, and Utsa needs to read every post.
@@ -43,11 +62,14 @@ Utsa runs on Telegram. Each community runs its own Utsa, with its own bot and it
 
 ## Files
 
+- `core/`: executable matching rules, Python API, contribution schema, synthetic examples, tests, and integration documentation.
 - `utsa-prompt.txt`: the standing rules Utsa follows on every turn.
 - `knowledge-base.md`: long-form guidance and message templates.
 - `demo-seed.md`: invented posts and a test battery for testing Utsa on Telegram before launch.
 
-## Where she goes next
+## Earlier product roadmap
+
+These ideas are retained from the original prompt materials and are not implemented by adding the portable core.
 
 - **The Persona Curtain:** anonymous-by-default matching, so people can connect on the substance of a need and an offer before revealing who they are.
 - **Reputation without ranking:** attested loops shown as quiet light, never as a score or a leaderboard.

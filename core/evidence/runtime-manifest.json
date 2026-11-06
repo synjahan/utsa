@@ -1,0 +1,33 @@
+{
+  "date": "2026-11-04",
+  "base_repository_revision": "68d55f243eec5df4bb04a6f46a96ef9bcccbefc9",
+  "python": "3.12.14",
+  "sqlite": "3.53.1",
+  "hyperon": "0.2.10",
+  "petta_revision": "ee5cacb6a6ecdd554a1c773aaf47e9a0f8a5af0f",
+  "swipl": "9.3.9",
+  "omega_source_review_revision": "b94f7bf44e10852e491967191f1c68643dc9ca90",
+  "hives_deployed_revision": null,
+  "tests": {
+    "hyperon": {
+      "passed": 46,
+      "failed": 0
+    },
+    "petta": {
+      "passed": 46,
+      "failed": 0
+    }
+  },
+  "fixture_provenance": "synthetic behavioral reconstruction and synthetic cross-domain example",
+  "sha256": {
+    "fixtures/cross_domain.json": "08b9f19a2f5eb5aceb905d47a5f0b9ec0aa0e0ab3a09e1f3f3bce79c8b61fca5",
+    "fixtures/sprint_reconstruction.json": "0459627fb62a45279ef14313583f192d95639dc6a7423638fd3c22361c4578c4",
+    "utsa_core/__init__.py": "bf2507fd51486998dee2d527370d9677a076bbf34eb6c0edb876ce7fa6fa6380",
+    "utsa_core/contribution.schema.json": "668f35f9f3b5c7a9b11b2968d13476223c8e78744239cc9b38970391806577da",
+    "utsa_core/demo.py": "6ee1110cb0e5e659be1b749897c6372c15d6fe846abbccc2bfbd978a6e749b7a",
+    "utsa_core/engine.py": "e9873566b4dd177b4197959296fea3bb7bb5d8531a14c4c4c5838a3e7cc10614",
+    "utsa_core/memory.py": "68aa55b8dd8354f3ecea05d9bf78f53b755f949a08501035b01691fdbeee9432",
+    "utsa_core/model.py": "ed57835faa26244a832b85ea03915da1723a7d6b411efc56652621077d3fcdf7",
+    "utsa_core/rules.metta": "98989133f9942069ac9bf4a196f4d4e05361ddc8a21675e7f3396d5708da9fd4"
+  }
+}

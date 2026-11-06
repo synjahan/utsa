@@ -1,0 +1,47 @@
+{
+  "date": "2026-11-05",
+  "base_repository": "https://github.com/synjahan/utsa",
+  "base_revision": "68d55f243eec5df4bb04a6f46a96ef9bcccbefc9",
+  "source_archive_sha256": "26a33e7aab977e5cabc8054a46da024e3dda3bbe25de2f76feee063f62cace54",
+  "source_tests_and_fixtures_unchanged": {
+    "utsa_core/demo.py": true,
+    "utsa_core/contribution.schema.json": true,
+    "utsa_core/rules.metta": true,
+    "utsa_core/__init__.py": true,
+    "utsa_core/engine.py": true,
+    "utsa_core/model.py": true,
+    "utsa_core/memory.py": true,
+    "tests/conftest.py": true,
+    "tests/test_connections.py": true,
+    "tests/test_discovery.py": true,
+    "tests/test_permissions_and_time.py": true,
+    "tests/test_00_sprint_regression.py": true,
+    "fixtures/sprint_reconstruction.json": true,
+    "fixtures/cross_domain.json": true
+  },
+  "python": "3.12.14",
+  "installed_dependencies": {
+    "hyperon": "0.2.10",
+    "jsonschema": "4.25.1",
+    "pytest": "8.4.2",
+    "attrs": "26.1.0",
+    "iniconfig": "2.3.1",
+    "jsonschema-specifications": "2025.9.1",
+    "packaging": "26.3",
+    "pluggy": "1.7.0",
+    "Pygments": "2.21.0",
+    "referencing": "0.37.0",
+    "rpds-py": "2026.9.1",
+    "typing_extensions": "4.16.0"
+  },
+  "install_command": "python -m pip install -c requirements-lock.txt -e '.[test]'",
+  "test_command": "python -m pytest -q --junitxml=evidence/github-import-hyperon-tests.xml",
+  "fresh_result": {
+    "runtime": "Hyperon 0.2.10",
+    "passed": 46,
+    "failed": 0,
+    "seconds": 11.72
+  },
+  "petta_result": "Archived 4 November 2026 results retained; not rerun for this import.",
+  "deployment_scope": "Local synthetic tests only; no Telegram or Hives service was invoked or changed."
+}

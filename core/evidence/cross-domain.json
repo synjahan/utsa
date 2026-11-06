@@ -1,0 +1,124 @@
+[
+  {
+    "type": "ComplementaryCapability",
+    "supports": [
+      {
+        "id": "water:need",
+        "revision": 1
+      },
+      {
+        "id": "neuro:unavailable",
+        "revision": 1
+      }
+    ],
+    "scope": {
+      "agent": "utsa",
+      "container": "pilot",
+      "purpose": "discovery"
+    },
+    "rule_version": "98989133f9942069ac9bf4a196f4d4e05361ddc8a21675e7f3396d5708da9fd4",
+    "bridge_version": "1f4dab53420b01276697f2f5a46462fc09753323398be8d3869f0415156ad9e3",
+    "evidence_id": "bridge:signal-quality-v1",
+    "explanation": "A reviewed example mapping transfers missing-sample and artifact-detection techniques from EEG signal analysis to sensor time-series quality checks.",
+    "limitation": "This supports a sample-data review only. It does not establish expertise in water chemistry, calibrating these sensors, or determining water safety.",
+    "cross_domain": true,
+    "age_gap_seconds": 1814400,
+    "observed_at": 1782129600,
+    "valid_until": 1783684800,
+    "state": "discovered",
+    "blockers": [
+      "OfferAvailabilityUnknown"
+    ],
+    "id": "rel:4926d2975c39498bab3fa1d885496d41ece1fba09bcf24da22b634c64253249a"
+  },
+  {
+    "type": "ComplementaryCapability",
+    "supports": [
+      {
+        "id": "water:need",
+        "revision": 1
+      },
+      {
+        "id": "neuro:offer",
+        "revision": 1
+      }
+    ],
+    "scope": {
+      "agent": "utsa",
+      "container": "pilot",
+      "purpose": "discovery"
+    },
+    "rule_version": "98989133f9942069ac9bf4a196f4d4e05361ddc8a21675e7f3396d5708da9fd4",
+    "bridge_version": "1f4dab53420b01276697f2f5a46462fc09753323398be8d3869f0415156ad9e3",
+    "evidence_id": "bridge:signal-quality-v1",
+    "explanation": "A reviewed example mapping transfers missing-sample and artifact-detection techniques from EEG signal analysis to sensor time-series quality checks.",
+    "limitation": "This supports a sample-data review only. It does not establish expertise in water chemistry, calibrating these sensors, or determining water safety.",
+    "cross_domain": true,
+    "age_gap_seconds": 1814400,
+    "observed_at": 1782129600,
+    "valid_until": 1783684800,
+    "state": "discovered",
+    "blockers": [],
+    "id": "rel:e7bf65260f68a190d02c3395e35c036ba17344f98efffbbfba77af8e7afd66a4"
+  },
+  {
+    "type": "GenuineOpportunity",
+    "supports": [
+      {
+        "id": "water:need",
+        "revision": 1
+      },
+      {
+        "id": "neuro:offer",
+        "revision": 1
+      }
+    ],
+    "scope": {
+      "agent": "utsa",
+      "container": "pilot",
+      "purpose": "discovery"
+    },
+    "rule_version": "98989133f9942069ac9bf4a196f4d4e05361ddc8a21675e7f3396d5708da9fd4",
+    "bridge_version": "1f4dab53420b01276697f2f5a46462fc09753323398be8d3869f0415156ad9e3",
+    "evidence_id": "bridge:signal-quality-v1",
+    "explanation": "A reviewed example mapping transfers missing-sample and artifact-detection techniques from EEG signal analysis to sensor time-series quality checks. Both records permit discovery here, availability windows overlap, capacity covers the request, and the supported conditions agree. Both owners still need to choose an introduction.",
+    "limitation": "This supports a sample-data review only. It does not establish expertise in water chemistry, calibrating these sensors, or determining water safety.",
+    "cross_domain": true,
+    "age_gap_seconds": 1814400,
+    "observed_at": 1782129600,
+    "valid_until": 1782907200,
+    "state": "candidate",
+    "blockers": [],
+    "id": "rel:6871bc0aa4ef15bc86eec5e6576fdf86eb1fa6a8dcd5943eb188d86602a9458b"
+  },
+  {
+    "type": "SharedInterest",
+    "supports": [
+      {
+        "id": "ecology:interest",
+        "revision": 1
+      },
+      {
+        "id": "water:need",
+        "revision": 1
+      }
+    ],
+    "scope": {
+      "agent": "utsa",
+      "container": "pilot",
+      "purpose": "discovery"
+    },
+    "rule_version": "98989133f9942069ac9bf4a196f4d4e05361ddc8a21675e7f3396d5708da9fd4",
+    "bridge_version": null,
+    "evidence_id": "topic:water-quality",
+    "explanation": "Both contributions explicitly name the same interest; this makes no capability or availability claim.",
+    "limitation": "Shared interest alone does not establish a useful collaboration.",
+    "cross_domain": true,
+    "age_gap_seconds": 1814400,
+    "observed_at": 1782129600,
+    "valid_until": 1783684800,
+    "state": "discovered",
+    "blockers": [],
+    "id": "rel:8bafabc0e118196633fbcd1da90d87acacf1b8969cc9d1c1b9b573c15e606857"
+  }
+]

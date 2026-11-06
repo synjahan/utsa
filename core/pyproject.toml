@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "utsa-core"
+version = "0.1.0"
+description = "Permissioned temporal matching and connection core with MeTTa reasoning"
+requires-python = ">=3.11"
+dependencies = ["hyperon==0.2.10", "jsonschema==4.25.1"]
+
+[project.optional-dependencies]
+test = ["pytest==8.4.2"]
+
+[project.scripts]
+utsa-demo = "utsa_core.demo:main"
+
+[tool.setuptools.package-data]
+utsa_core = ["*.metta", "*.json"]
+
+[tool.setuptools.packages.find]
+include = ["utsa_core*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]

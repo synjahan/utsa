@@ -1,0 +1,186 @@
+{
+  "fixture_kind": "synthetic, reviewed domain bridge for this example only",
+  "time": "2026-06-22T12:00:00Z",
+  "target_container": "pilot",
+  "contributions": [
+    {
+      "schema_version": "1.0",
+      "id": "water:need",
+      "revision": 1,
+      "owner": "water-owner",
+      "entity": {
+        "id": "water-owner",
+        "type": "person"
+      },
+      "origin": {
+        "container": "water",
+        "source_ref": "fixture:water:need"
+      },
+      "kind": "need",
+      "domain": "community-water-monitoring",
+      "topics": [
+        "water-quality"
+      ],
+      "requires": [
+        "sensor-timeseries-quality"
+      ],
+      "provides": [],
+      "capability_evidence": "confirmed",
+      "verbatim": "Review sensor time series for missing samples and suspicious spikes.",
+      "permitted_summary": "Review sensor time series for missing samples and suspicious spikes.",
+      "action": "Review one sample sensor dataset and flag missing samples and spikes; do not infer water safety.",
+      "created_at": "2026-06-22T12:00:00Z",
+      "valid_from": "2026-06-22T12:00:00Z",
+      "valid_until": "2026-07-15T12:00:00Z",
+      "fresh_until": "2026-07-10T12:00:00Z",
+      "status": "active",
+      "availability": {
+        "confirmed": true,
+        "from": "2026-06-01T12:00:00Z",
+        "until": "2026-07-01T12:00:00Z",
+        "hours": 2
+      },
+      "conditions": {
+        "mode": "remote",
+        "terms": "volunteer",
+        "unresolved": []
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "ecology:interest",
+      "revision": 1,
+      "owner": "ecology-reader",
+      "entity": {
+        "id": "ecology-reader",
+        "type": "person"
+      },
+      "origin": {
+        "container": "ecology",
+        "source_ref": "fixture:ecology:interest"
+      },
+      "kind": "interest",
+      "domain": "ecology",
+      "topics": [
+        "water-quality"
+      ],
+      "requires": [],
+      "provides": [],
+      "capability_evidence": "confirmed",
+      "verbatim": "I enjoy reading about water quality.",
+      "permitted_summary": "I enjoy reading about water quality.",
+      "action": "",
+      "created_at": "2026-06-01T12:00:00Z",
+      "valid_from": "2026-06-01T12:00:00Z",
+      "valid_until": "2026-07-15T12:00:00Z",
+      "fresh_until": "2026-07-10T12:00:00Z",
+      "status": "active",
+      "availability": {
+        "confirmed": false,
+        "from": "2026-06-01T12:00:00Z",
+        "until": "2026-07-01T12:00:00Z",
+        "hours": 4
+      },
+      "conditions": {
+        "mode": "remote",
+        "terms": "volunteer",
+        "unresolved": []
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "neuro:unavailable",
+      "revision": 1,
+      "owner": "neuro-busy",
+      "entity": {
+        "id": "neuro-busy",
+        "type": "person"
+      },
+      "origin": {
+        "container": "neuro",
+        "source_ref": "fixture:neuro:unavailable"
+      },
+      "kind": "offer",
+      "domain": "neuroscience",
+      "topics": [
+        "signal-processing"
+      ],
+      "requires": [],
+      "provides": [
+        "eeg-signal-quality"
+      ],
+      "capability_evidence": "confirmed",
+      "verbatim": "I can review sampled signal data, but my next available time is not confirmed.",
+      "permitted_summary": "I can review sampled signal data, but my next available time is not confirmed.",
+      "action": "",
+      "created_at": "2026-06-01T12:00:00Z",
+      "valid_from": "2026-06-01T12:00:00Z",
+      "valid_until": "2026-07-15T12:00:00Z",
+      "fresh_until": "2026-07-10T12:00:00Z",
+      "status": "active",
+      "availability": {
+        "confirmed": false,
+        "from": "2026-06-01T12:00:00Z",
+        "until": "2026-07-01T12:00:00Z",
+        "hours": 4
+      },
+      "conditions": {
+        "mode": "remote",
+        "terms": "volunteer",
+        "unresolved": []
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "neuro:offer",
+      "revision": 1,
+      "owner": "neuro-helper",
+      "entity": {
+        "id": "neuro-helper",
+        "type": "person"
+      },
+      "origin": {
+        "container": "neuro",
+        "source_ref": "fixture:neuro:offer"
+      },
+      "kind": "offer",
+      "domain": "neuroscience",
+      "topics": [
+        "signal-processing"
+      ],
+      "requires": [],
+      "provides": [
+        "eeg-signal-quality"
+      ],
+      "capability_evidence": "confirmed",
+      "verbatim": "I can spend four hours identifying missing samples and artifacts in time series.",
+      "permitted_summary": "I can spend four hours identifying missing samples and artifacts in time series.",
+      "action": "",
+      "created_at": "2026-06-01T12:00:00Z",
+      "valid_from": "2026-06-01T12:00:00Z",
+      "valid_until": "2026-07-15T12:00:00Z",
+      "fresh_until": "2026-07-10T12:00:00Z",
+      "status": "active",
+      "availability": {
+        "confirmed": true,
+        "from": "2026-06-01T12:00:00Z",
+        "until": "2026-07-01T12:00:00Z",
+        "hours": 4
+      },
+      "conditions": {
+        "mode": "remote",
+        "terms": "volunteer",
+        "unresolved": []
+      }
+    }
+  ],
+  "bridge": {
+    "capability": "eeg-signal-quality",
+    "requirement": "sensor-timeseries-quality",
+    "evidence_id": "bridge:signal-quality-v1",
+    "explanation": "A reviewed example mapping transfers missing-sample and artifact-detection techniques from EEG signal analysis to sensor time-series quality checks.",
+    "limitation": "This supports a sample-data review only. It does not establish expertise in water chemistry, calibrating these sensors, or determining water safety.",
+    "source_domain": "neuroscience",
+    "target_domain": "community-water-monitoring"
+  }
+}
