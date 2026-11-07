@@ -1,4 +1,5 @@
 """Shared typed contribution vocabulary; host identity never comes from prose."""
+
 from __future__ import annotations
 
 import json
@@ -13,6 +14,7 @@ VALIDATOR = Draft202012Validator(SCHEMA, format_checker=FormatChecker())
 
 
 def epoch(value: str) -> int:
+    """Parse an ISO-8601 UTC timestamp into integer seconds."""
     dt = datetime.fromisoformat(value.replace("Z", "+00:00"))
     if dt.tzinfo is None or dt.utcoffset().total_seconds() != 0 or dt.microsecond:
         raise ValueError("timestamps must be UTC with whole-second precision")
@@ -20,17 +22,19 @@ def epoch(value: str) -> int:
 
 
 def timestamp(value: int) -> str:
+    """Format integer seconds as an ISO-8601 UTC timestamp."""
     return datetime.fromtimestamp(value, timezone.utc).isoformat().replace("+00:00", "Z")
 
 
 def validate(record: dict) -> None:
+    """Check a record against the JSON Schema and the semantic rules; raise on failure."""
     VALIDATOR.validate(record)
-    if not math.isfinite(record['availability']['hours']):
-        raise ValueError('effort must be finite')
-    if record['kind'] == 'need' and record['availability']['hours'] <= 0:
-        raise ValueError('an actionable need requires positive effort')
+    if not math.isfinite(record["availability"]["hours"]):
+        raise ValueError("effort must be finite")
+    if record["kind"] == "need" and record["availability"]["hours"] <= 0:
+        raise ValueError("an actionable need requires positive effort")
     times = [record[k] for k in ("created_at", "valid_from", "valid_until", "fresh_until")]
-    times += list(record["availability"][k] for k in ("from", "until"))
+    times += [record["availability"][k] for k in ("from", "until")]
     for t in times:
         epoch(t)
     if epoch(record["valid_from"]) >= epoch(record["valid_until"]):
@@ -49,6 +53,7 @@ def validate(record: dict) -> None:
 @dataclass(frozen=True)
 class Actor:
     """Trusted embedding boundary. Adapters must authenticate this object."""
+
     subject: str
     container: str
 

@@ -17,3 +17,5 @@ in the text logs were replaced with repository-relative paths beginning with
 `core/evidence/`. Container hostnames in JUnit XML were replaced with `redacted`.
 Commands, test names, cases, counts, results, timestamps, timings, and all other
 test data are unchanged. The raw installation log is not included.
+
+`polish-2026-11-manifest.json`, `polish-2026-11-hyperon-tests.txt` and `.xml` record the 6 November readability polish run against its own source hashes. `runtime-manifest.json` keeps its original 4 November scope, hashes and results.

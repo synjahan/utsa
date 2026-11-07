@@ -88,3 +88,24 @@ The import retains the original source, schema, fixture, and test bytes.
 Documentation changes clarify scope and remove private workspace references.
 The archived PeTTa results above were not rerun during this import.
 This check did not exercise or change any live Telegram or Hives service.
+
+## Polish, 6 November 2026 (branch `polish-2026-11`)
+
+Readability only; **matching semantics unchanged**. Black formatting (line length 100, double
+quotes), one-line docstrings on every public function, `_discover` split into four small methods,
+`Conflict` renamed `ConflictError` with the old name kept as an alias, and the duplicated
+window-overlap test in `rules.metta` factored into one `windows-overlap` rule.
+
+**Existing-state impact.** Because `rules.metta` changed, `RULE_VERSION` changed, and every relation
+id derives from it. A database carried across this update keeps its records, grants and history, but
+its open suggestions must be rediscovered under the new version, and earlier acceptances do not carry
+across: both owners accept again. This is the fresh-acceptance policy decided on 6 November, and
+`tests/test_rule_version_upgrade.py` pins it. Consent is never carried silently across versions.
+
+**Evidence.** The polish run is recorded separately in `evidence/polish-2026-11-manifest.json`
+(source hashes, runtime versions, results) with its log in `evidence/polish-2026-11-hyperon-tests.txt`
+and `.xml`: 47 tests pass on Hyperon 0.2.10 (46 original plus the upgrade test); `smoke_loop_v2.py`
+exits 0; the demo outputs match the archived evidence in every claim, blocker, explanation and date,
+with `rule_version` and relation ids differing as designed. The historical
+`evidence/runtime-manifest.json` is unchanged and describes the pre-polish source only. **The PeTTa
+run on Omega's pinned `v1.0.4` has not been performed for this source and is pending.**
