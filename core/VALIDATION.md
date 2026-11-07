@@ -88,3 +88,14 @@ The import retains the original source, schema, fixture, and test bytes.
 Documentation changes clarify scope and remove private workspace references.
 The archived PeTTa results above were not rerun during this import.
 This check did not exercise or change any live Telegram or Hives service.
+
+## Polish, 6 November 2026 (branch `polish-2026-11`)
+
+Readability only; behaviour unchanged. Black formatting (line length 100, double quotes), one-line
+docstrings on every public function, `_discover` split into four small methods, `Conflict` renamed
+`ConflictError` with the old name kept as an alias, and the duplicated window-overlap test in
+`rules.metta` factored into one `windows-overlap` rule. Checks: 46 tests pass on Hyperon 0.2.10;
+`smoke_loop_v2.py` exits 0; the demo outputs match the archived evidence in every claim, blocker,
+explanation and date. Because `rules.metta` changed, `rule_version` and the derived relation ids
+differ from the archived `cross-domain.json` and `sprint-new.json`; that is the versioning working
+as designed. The PeTTa run on Omega's pinned `v1.0.4` is still pending.

@@ -24,10 +24,11 @@
     "fixtures/sprint_reconstruction.json": "0459627fb62a45279ef14313583f192d95639dc6a7423638fd3c22361c4578c4",
     "utsa_core/__init__.py": "bf2507fd51486998dee2d527370d9677a076bbf34eb6c0edb876ce7fa6fa6380",
     "utsa_core/contribution.schema.json": "668f35f9f3b5c7a9b11b2968d13476223c8e78744239cc9b38970391806577da",
-    "utsa_core/demo.py": "6ee1110cb0e5e659be1b749897c6372c15d6fe846abbccc2bfbd978a6e749b7a",
-    "utsa_core/engine.py": "e9873566b4dd177b4197959296fea3bb7bb5d8531a14c4c4c5838a3e7cc10614",
-    "utsa_core/memory.py": "68aa55b8dd8354f3ecea05d9bf78f53b755f949a08501035b01691fdbeee9432",
-    "utsa_core/model.py": "ed57835faa26244a832b85ea03915da1723a7d6b411efc56652621077d3fcdf7",
-    "utsa_core/rules.metta": "98989133f9942069ac9bf4a196f4d4e05361ddc8a21675e7f3396d5708da9fd4"
-  }
+    "utsa_core/demo.py": "ed12b826a425f7dab10e840c893032c8257a2f4a1591f252bf65c83aba00d9f0",
+    "utsa_core/engine.py": "c2e4e6823c088b33dcc2c53a2fd49ba3d86dd8b023592fedf3367b280af2899e",
+    "utsa_core/memory.py": "eaa99a8a010ebde005968c8cfeead3b92dbf3628ce0fb97d26c309e5ee124f14",
+    "utsa_core/model.py": "9f2ba344c83be8f2641b3be7b5127091e2846243c19c6173b9e6e6f4658efbfd",
+    "utsa_core/rules.metta": "aa7da7f26cc68f4b75825a149b32f1d2c08f1b84a347635cbe17a11249456e0f"
+  },
+  "polished": "2026-11-06 on branch polish-2026-11: formatting, docstrings, _discover split, ConflictError, windows-overlap rule; behaviour unchanged, Hyperon 46/46 rerun; PeTTa run pending on v1.0.4"
 }

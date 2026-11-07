@@ -14,6 +14,9 @@
 (= (earlier $a $b) (if (< $a $b) $a $b))
 (= (window-hours $ns $ne $os $oe $now)
    (/ (- (earlier $ne $oe) (later $now (later $ns $os))) 3600))
+; Both windows overlap each other and neither has already closed.
+(= (windows-overlap $ns $ne $os $oe $now)
+   (and (< $ns $oe) (and (< $os $ne) (and (< $now $ne) (< $now $oe)))))
 
 ; Every inference, including interests, requires both records to be permitted.
 (= (pair-allowed $a $b)
@@ -62,8 +65,7 @@
                 (and (and (exists (Actionable $n)) (conditions-clear $n $o))
                      (and (and (>= $capacity $demand)
                                (>= (window-hours $ns $ne $os $oe $now) $demand))
-                          (and (< $ns $oe) (and (< $os $ne)
-                               (and (< $now $ne) (< $now $oe)))))))
+                          (windows-overlap $ns $ne $os $oe $now))))
            (GenuineOpportunity $n $o $cap $req $evidence)
            (empty)))))
 
@@ -81,8 +83,7 @@
      (if (< $capacity $demand) InsufficientCapacity (empty))))
 (= (blocker $n $o)
    (match &self (, (Window $n $ns $ne) (Window $o $os $oe) (Now $now))
-     (if (not (and (< $ns $oe) (and (< $os $ne)
-                   (and (< $now $ne) (< $now $oe)))))
+     (if (not (windows-overlap $ns $ne $os $oe $now))
          NoRemainingSharedWindow (empty))))
 (= (blocker $n $o)
    (match &self (, (Window $n $ns $ne) (Window $o $os $oe)
