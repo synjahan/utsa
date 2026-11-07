@@ -37,11 +37,11 @@ class MemoryPort(Protocol):
         ...
 
     def save_relationship(self, relationship: dict) -> None:
-        """Store or refresh one relation under its revision-scoped id."""
+        """Store one relation under its revision-scoped id; an existing row is left unchanged."""
         ...
 
     def get_relationship(self, key: str) -> dict:
-        """Return a stored relation by id, or None."""
+        """Return a stored relation by id; raise KeyError if there is none."""
         ...
 
     def approved(self, key: str, owner: str) -> bool:
@@ -108,7 +108,7 @@ class SQLiteMemory:
         self.db.execute("INSERT OR REPLACE INTO meta VALUES ('clock', ?)", (str(now),))
 
     def latest(self, record_id: str) -> dict:
-        """Return the current revision of a record, or None."""
+        """Return the current revision of a record; raise KeyError if there is none."""
         row = self.db.execute(
             "SELECT payload FROM records WHERE id=? ORDER BY revision DESC LIMIT 1", (record_id,)
         ).fetchone()
@@ -245,16 +245,16 @@ class SQLiteMemory:
         )
 
     def save_relationship(self, relationship: dict):
+        """Store one relation under its revision-scoped id; an existing row is left unchanged."""
         # Materialized inference metadata lives in the same authority. No quotes,
         # contact fields, or duplicate source payloads are copied into this row.
-        """Store or refresh one relation under its revision-scoped id."""
         self.db.execute(
             "INSERT OR IGNORE INTO relationships VALUES (?,?)",
             (relationship["id"], json.dumps(relationship, sort_keys=True)),
         )
 
     def get_relationship(self, key: str) -> dict:
-        """Return a stored relation by id, or None."""
+        """Return a stored relation by id; raise KeyError if there is none."""
         row = self.db.execute("SELECT payload FROM relationships WHERE id=?", (key,)).fetchone()
         if row is None:
             raise KeyError(key)

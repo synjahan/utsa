@@ -1,0 +1,34 @@
+{
+  "run": "polish-2026-11",
+  "date": "2026-11-06",
+  "branch": "polish-2026-11",
+  "base_commit": "434486f",
+  "scope": "Readability polish of the core; matching semantics unchanged; rule_version changed because rules.metta changed",
+  "runtime": {
+    "python": "3.12.3",
+    "hyperon": "0.2.10",
+    "jsonschema": "4.25.1",
+    "pytest": "8.4.2"
+  },
+  "results": {
+    "hyperon_tests": "47 passed (46 original + 1 upgrade regression)",
+    "hyperon_log": "evidence/polish-2026-11-hyperon-tests.txt",
+    "hyperon_junit": "evidence/polish-2026-11-hyperon-tests.xml",
+    "smoke_loop_v2": "exit 0",
+    "demo_outputs": "identical to archived evidence in every claim, blocker, explanation and date; rule_version and relation ids differ",
+    "petta": "PENDING on Omega's pinned PeTTa v1.0.4 (7037f4c), SWI-Prolog 10.0.2; not run"
+  },
+  "sha256": {
+    "utsa_core/__init__.py": "bf2507fd51486998dee2d527370d9677a076bbf34eb6c0edb876ce7fa6fa6380",
+    "utsa_core/contribution.schema.json": "668f35f9f3b5c7a9b11b2968d13476223c8e78744239cc9b38970391806577da",
+    "utsa_core/demo.py": "ed12b826a425f7dab10e840c893032c8257a2f4a1591f252bf65c83aba00d9f0",
+    "utsa_core/engine.py": "bfab8db7fdc7354f9b407809154bcde5e68936619a67146fb5c72c869e32f639",
+    "utsa_core/memory.py": "7bc6663badc18e61665d7f939adc7fb1f3c388cfa9f57b037110b81e0ea17398",
+    "utsa_core/model.py": "9f2ba344c83be8f2641b3be7b5127091e2846243c19c6173b9e6e6f4658efbfd",
+    "utsa_core/rules.metta": "aa7da7f26cc68f4b75825a149b32f1d2c08f1b84a347635cbe17a11249456e0f",
+    "fixtures/cross_domain.json": "08b9f19a2f5eb5aceb905d47a5f0b9ec0aa0e0ab3a09e1f3f3bce79c8b61fca5",
+    "fixtures/sprint_reconstruction.json": "0459627fb62a45279ef14313583f192d95639dc6a7423638fd3c22361c4578c4",
+    "tests/test_rule_version_upgrade.py": "f7e66ec9e5cddc65f444875db15a6e74936ca3035d63a674f675c05337420801"
+  },
+  "note": "The historical runtime-manifest.json keeps its original 4 Nov hashes, runtimes and results and describes the pre-polish source only."
+}

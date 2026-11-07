@@ -93,7 +93,7 @@ class PeTTaRuntime:
         tokens = re.findall(r"\(|\)|[^\s()]+", line)
 
         def read(index):
-            """Return the rule file's text, loaded once."""
+            """Parse one atom starting at this token; return it and the next token index."""
             if index >= len(tokens):
                 raise RuntimeError("incomplete PeTTa output")
             value = tokens[index]
@@ -114,7 +114,7 @@ class PeTTaRuntime:
             raise RuntimeError("invalid PeTTa result")
 
         def show(item):
-            """Render a Python value as a MeTTa atom."""
+            """Render a parsed PeTTa value back into MeTTa text, nesting lists in parentheses."""
             return "(" + " ".join(show(x) for x in item) + ")" if isinstance(item, list) else item
 
         answer = [show(item) for item in value]
